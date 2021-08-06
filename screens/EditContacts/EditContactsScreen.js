@@ -8,7 +8,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 const userIcon = <FontAwesome name="user-circle" size={100} color="orange" />;
 
 
-const EditContactsScreen = (props) => {
+const EditContactsScreen = ({navigation}) => {
 
   function renderHeader() {
     return (
@@ -27,7 +27,7 @@ const EditContactsScreen = (props) => {
         }}
         >
         <TouchableOpacity
-          onPress={() => navigation.navigate('Shop', {screen: 'Cart'})}
+          onPress={() => navigation.goBack()}
           flex
           row
           spread

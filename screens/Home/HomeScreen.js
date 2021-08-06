@@ -172,7 +172,6 @@ const HomeScreen = ({navigation}) => {
           borderColor: 'grey'
         }}>
                  <TouchableOpacity
-          onPress={() => navigation.navigate('Shop', {screen: 'Cart'})}
           flex
           right
           style={{}}>
@@ -184,7 +183,7 @@ const HomeScreen = ({navigation}) => {
         </View>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate('Shop', {screen: 'Cart'})}
+
           flex
           left
           style={{}}>

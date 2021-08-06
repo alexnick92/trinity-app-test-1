@@ -18,26 +18,22 @@ const homeStack = () => {
   return (
     <Stack.Navigator screenOptions={baseHeaderOptions}>
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Edit" component={Edit} />
+
     </Stack.Navigator>
   );
 };
 
 
 
-const warrantyStack = () => {
-  return (
-    <Stack.Navigator screenOptions={baseHeaderOptions}>
-      <Stack.Screen name="Warranty" component={Edit} />
-    </Stack.Navigator>
-  );
-};
+
 
 const AppNavigator = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Warranty"
+      initialRouteName="Edit"
       tabBarOptions={{
-        activeTintColor: '#029BDB',
+        activeTintColor: 'orange',
         style: {
           borderTopWidth: 0,
         },
@@ -52,8 +48,8 @@ const AppNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Edit Contacts"
-        component={warrantyStack}
+        name="Edit Contact"
+        component={Edit}
         options={{
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons name="devices" size={size} color={color} />
