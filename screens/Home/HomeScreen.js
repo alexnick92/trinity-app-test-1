@@ -154,7 +154,6 @@ const customData = [
   }
 ];
 
-
 const HomeScreen = ({navigation}) => {
   function renderHeader() {
     return (
@@ -171,10 +170,9 @@ const HomeScreen = ({navigation}) => {
           borderBottomWidth: 0.25,
           borderColor: 'grey'
         }}>
-                 <TouchableOpacity
+        <TouchableOpacity
           flex
-          right
-          style={{}}>
+          right>
           {searchIcon}
         </TouchableOpacity>
 
@@ -183,14 +181,11 @@ const HomeScreen = ({navigation}) => {
         </View>
 
         <TouchableOpacity
-
           flex
           left
-          style={{}}>
+          >
           {addIcon}
         </TouchableOpacity>
-
-       
       </View>
       
       
@@ -206,18 +201,20 @@ const HomeScreen = ({navigation}) => {
               {customData.map((customData, index) => {
                 return [
                   <View key={index}>
-                    <View row spread
+                    <TouchableOpacity  
+                    onPress={()=> navigation.navigate("Edit")}
                       style={{
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
                         paddingRight: 32,
                         borderBottomWidth: 0.25,
-                            borderColor: 'grey'
+                        borderColor: 'grey'
                       }}>
                         <View marginV-10
                           style={{
                             marginHorizontal: 10,
                             flex: 0.3,
                             resizeMode: 'contain',
-                            
                           }}>
                           {userIcon}
                         </View>
@@ -229,7 +226,7 @@ const HomeScreen = ({navigation}) => {
                         {customData.lastName}
                       </Text>
                       </View>
-                    </View>
+                    </TouchableOpacity>
                   </View>,
                 ];
               })}
