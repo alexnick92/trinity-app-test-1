@@ -8,7 +8,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 const plusIcon = <AntDesign name="pluscircleo" size={25} color="black" />;
 
 
-const WarrantyScreen = (props) => {
+const EditContactsScreen = (props) => {
   
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#ffffff'}}>
@@ -20,4 +20,4 @@ const WarrantyScreen = (props) => {
   );
 };
 
-export default WarrantyScreen;
+export default EditContactsScreen;

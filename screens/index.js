@@ -1,5 +1,5 @@
 import Home from './Home/HomeScreen';
 
-import Warranty from './Warranty/WarrantyScreen';
+import Edit from './EditContacts/EditContactsScreen';
 
-export {Home, Warranty,};
+export {Home, Edit,};

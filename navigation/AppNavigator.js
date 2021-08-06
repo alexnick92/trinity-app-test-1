@@ -4,7 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {
   Home,
-  Warranty,
+  Edit,
 } from '../screens';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -27,7 +27,7 @@ const homeStack = () => {
 const warrantyStack = () => {
   return (
     <Stack.Navigator screenOptions={baseHeaderOptions}>
-      <Stack.Screen name="Warranty" component={Warranty} />
+      <Stack.Screen name="Warranty" component={Edit} />
     </Stack.Navigator>
   );
 };
@@ -43,7 +43,7 @@ const AppNavigator = () => {
         },
       }}>
       <Tab.Screen
-        name="Screen 1"
+        name="Contacts"
         component={homeStack}
         options={{
           tabBarIcon: ({color, size}) => (
@@ -52,7 +52,7 @@ const AppNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Screen 2"
+        name="Edit Contacts"
         component={warrantyStack}
         options={{
           tabBarIcon: ({color, size}) => (

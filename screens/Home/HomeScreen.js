@@ -10,14 +10,60 @@ import styles from './styles';
 
 import {Card, Button, View, Text} from 'react-native-ui-lib';
 
-const HomeScreen = ({navigation}) => {
+import FeatherIcon from 'react-native-vector-icons/Feather';
+const searchIcon = <FeatherIcon name="search" size={32} color="orange" />;
+const addIcon = <FeatherIcon name="plus" size={32} color="orange" />;
 
+
+const HomeScreen = ({navigation}) => {
+  function renderHeader() {
+    return (
+      <View
+        row
+        paddingH-24
+        paddingV-24
+        center
+        style={{
+          height: 100,
+          backgroundColor: 'white',
+          shadowColor: '#000000',
+          shadowOffset: {width: 0, height: 6},
+          shadowOpacity: 0.09,
+          borderBottomWidth: 0.25,
+          borderColor: 'grey'
+        }}>
+                 <TouchableOpacity
+          onPress={() => navigation.navigate('Shop', {screen: 'Cart'})}
+          flex
+          right
+          style={{}}>
+          {searchIcon}
+        </TouchableOpacity>
+
+        <View flex center>
+          <Text  style={styles.Header}>Contacts</Text>
+        </View>
+
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Shop', {screen: 'Cart'})}
+          flex
+          left
+          style={{}}>
+          {addIcon}
+        </TouchableOpacity>
+
+       
+      </View>
+      
+      
+    );
+  }
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#ffffff'}}>
-   
+      {renderHeader()}
       <ScrollView style={{backgroundColor: '#ffffff', paddingTop: 10}}>
-       <Text>Screen 1</Text>
+       <View></View>
       </ScrollView>
     </SafeAreaView>
   );
